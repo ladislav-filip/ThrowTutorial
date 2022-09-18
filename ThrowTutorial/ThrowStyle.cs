@@ -14,4 +14,17 @@ public static class ThrowStyle
         
         Console.WriteLine($"Parameter is correctly. Value is '{name}'");
     }
+
+    public static void Run(Employee? employee)
+    {
+        employee.ThrowIfNull()
+            .Throw(() => new ApplicationException("Age is greather than 100"))
+            .IfGreaterThan(s => s.Age, 100)
+            .Throw(paramName => new CustomException(paramName, "Unknown gender must has age greater than 14"))
+            .IfTrue(s => s.Age < 15 && s.Gender == Gender.Unknown)
+            .Throw() // revert implicit exception
+            .IfNotHttps(s => s.WebUrl);
+
+        Console.WriteLine(employee);
+    }
 }

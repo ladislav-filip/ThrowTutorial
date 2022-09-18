@@ -8,9 +8,16 @@ Console.WriteLine();
 
 try
 {
-    string? name = "Petr";
-    
-    ThrowStyle.Run(name);
+    // string? name = "Petr";
+    var employee = new Employee(
+        Name: "John", 
+        Surname: "Rambo", 
+        Age: 33, 
+        Gender.Male, 
+        WebUrl: new Uri("http://example.com")
+        );
+
+    ThrowStyle.Run(employee);
 }
 catch (Exception e)
 {
