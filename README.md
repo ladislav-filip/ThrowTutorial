@@ -8,3 +8,5 @@ raise exception when rules are not followed.
 
 Presentation a better readable code with "Throw".
 
+## Show 2
+Custom messages or custom exception by defined rule.

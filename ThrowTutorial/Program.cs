@@ -8,9 +8,7 @@ Console.WriteLine();
 
 try
 {
-    var name = "Peter";
-    
-    //StandardStyle.Run(name);
+    string? name = "Petr";
     
     ThrowStyle.Run(name);
 }
