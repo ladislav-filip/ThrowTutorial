@@ -1,8 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
-
-using Throw;
 using ThrowTutorial;
 
+Console.Clear();
 Console.WriteLine();
 Console.WriteLine("Start...");
 Console.WriteLine();
