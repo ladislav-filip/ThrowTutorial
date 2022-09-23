@@ -8,18 +8,8 @@ Console.WriteLine();
 
 try
 {
-    // string? name = "Petr";
-    var employee = new Employee(
-        Name: "John", 
-        Surname: "Rambo", 
-        Age: 8, 
-        Gender.Male, 
-        WebUrl: new Uri("https://example.com"),
-        // Cars: new List<string>() 
-        Cars: new List<string>(new[] { "Skoda", "BMW", "Renault" })
-        );
-
-    ThrowStyle.Run(employee);
+    var date = new DateTime(2110, 10, 10);
+    ThrowStyle.Run(date);
 }
 catch (Exception e)
 {

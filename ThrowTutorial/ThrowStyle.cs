@@ -31,4 +31,11 @@ public static class ThrowStyle
 
         Console.WriteLine(employee);
     }
+
+    public static void Run(DateTime date)
+    {
+        date
+            .Throw()
+            .IfThisCentury();
+    }
 }
