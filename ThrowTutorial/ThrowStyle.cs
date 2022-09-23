@@ -18,12 +18,16 @@ public static class ThrowStyle
     public static void Run(Employee? employee)
     {
         employee.ThrowIfNull()
-            .Throw(() => new ApplicationException("Age is greather than 100"))
+            //.Throw(() => new ApplicationException("Age is greather than 100"))
             .IfGreaterThan(s => s.Age, 100)
-            .Throw(paramName => new CustomException(paramName, "Unknown gender must has age greater than 14"))
-            .IfTrue(s => s.Age < 15 && s.Gender == Gender.Unknown)
-            .Throw() // revert implicit exception
-            .IfNotHttps(s => s.WebUrl);
+            //.Throw(paramName => new CustomException(paramName, "Unknown gender must has age greater than 14"))
+            //.IfTrue(s => s.Age < 15 && s.Gender == Gender.Unknown)
+            //.Throw() // revert implicit exception
+            //.IfNotHttps(s => s.WebUrl)
+            // .IfOutOfRange(s => s.Age, 10, 90)  // ArgumentOutOfRangeException
+            .IfEmpty(s => s.Cars)  // neexistuje něco jako IfNullOrEmpty
+            .IfContains(s => s.Cars, "BMW")
+            ;
 
         Console.WriteLine(employee);
     }

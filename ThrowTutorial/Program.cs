@@ -12,9 +12,11 @@ try
     var employee = new Employee(
         Name: "John", 
         Surname: "Rambo", 
-        Age: 33, 
+        Age: 8, 
         Gender.Male, 
-        WebUrl: new Uri("http://example.com")
+        WebUrl: new Uri("https://example.com"),
+        // Cars: new List<string>() 
+        Cars: new List<string>(new[] { "Skoda", "BMW", "Renault" })
         );
 
     ThrowStyle.Run(employee);

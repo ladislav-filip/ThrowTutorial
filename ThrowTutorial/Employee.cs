@@ -5,7 +5,8 @@ public sealed record Employee(
     string Surname,
     byte Age,
     Gender Gender,
-    Uri WebUrl
+    Uri WebUrl,
+    List<string>? Cars = null
 )
 {
     public override string ToString()
