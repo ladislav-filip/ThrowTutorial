@@ -8,8 +8,11 @@ Console.WriteLine();
 
 try
 {
+    var cars = new[] { "BMW", "Skoda", "Trabant" };
     var date = new DateTime(2110, 10, 10);
-    ThrowStyle.Run(date);
+    
+    // ThrowStyle.Run(date);
+    ThrowStyle.Run(cars);
 }
 catch (Exception e)
 {

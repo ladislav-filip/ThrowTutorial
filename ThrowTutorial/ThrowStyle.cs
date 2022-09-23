@@ -38,4 +38,11 @@ public static class ThrowStyle
             .Throw()
             .IfThisCentury();
     }
+
+    public static void Run(IEnumerable<string> cars)
+    {
+        cars
+            .Throw()
+            .IfAcceptedCars();
+    }
 }

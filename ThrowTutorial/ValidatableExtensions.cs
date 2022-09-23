@@ -16,4 +16,14 @@ public static class ValidatableExtensions
 
         return ref validatable;
     }
+    
+    public static ref readonly Validatable<IEnumerable<string>> IfAcceptedCars(this in Validatable<IEnumerable<string>> validatable)
+    {
+        if (validatable.Value.Any(p => new string[] { "Trabant", "Moskvič" }.Contains(p)))
+        {
+            throw new CustomException( validatable.ParamName, "Cars not accepted");
+        }
+
+        return ref validatable;
+    }
 }
